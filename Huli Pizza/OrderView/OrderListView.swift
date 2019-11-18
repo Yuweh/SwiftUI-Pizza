@@ -13,11 +13,7 @@ struct OrderListView: View {
         VStack {
             Text("Your Order")
             List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
-                HStack(alignment:.firstTextBaseline) {
-                    Text("Your Order Pizza here")
-                    Spacer()
-                    Text("$0.00")
-                }
+                OrderRowView()
             }
         }
     }
@@ -28,3 +24,5 @@ struct OrderListView_Previews: PreviewProvider {
         OrderListView()
     }
 }
+
+
