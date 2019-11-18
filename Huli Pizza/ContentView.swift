@@ -22,18 +22,23 @@ struct ContentView: View {
             
             Text("Order Pizza")
                 .font(.largeTitle)
-            Spacer()
-            HStack(alignment:.top, spacing:15) {
-                Image("1_100w")
-                Text("Huli Chicken Pizza")
-                Spacer()
+            Text("MENU")
+            List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
+                HStack(alignment:.top, spacing: 15) {
+                    Image("1_100w")
+                    Text("Huli Chicken Pizza")
+                    Spacer()
+                }
             }
             Text("Your Order")
-            HStack(alignment:.firstTextBaseline) {
-                Text("Your Order Pizza here")
-                Spacer()
-                Text("$0.00")
+            List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
+                HStack(alignment:.firstTextBaseline) {
+                    Text("Your Order Pizza here")
+                    Spacer()
+                    Text("$0.00")
+                }
             }
+            Spacer()
         }
             .padding()
     }
@@ -42,8 +47,8 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-            .colorScheme(.dark)
-            .background(Color.black)
+            .colorScheme(.light)
+            .background(Color.white)
             .previewDevice("iPhone Xs Max")
     }
 }
