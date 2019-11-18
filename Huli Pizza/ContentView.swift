@@ -12,39 +12,10 @@ struct ContentView: View {
     var body: some View {
         
         VStack {
-            ZStack {
-                Image("Surf Board")
-                .resizable()
-                .scaledToFit()
-                Text("Huli Pizza Company")
-                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
-            }
+            ContentHeaderView()
+            MenuListView()
+            OrderListView()
             
-            Text("Order Pizza")
-                .font(.largeTitle)
-            Text("MENU")
-            List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
-                HStack(alignment:.top, spacing: 15) {
-                    Image("1_100w")
-                    VStack {
-                        Text("Huli Chicken Pizza")
-                        HStack {
-                            ForEach(0..<4){item in
-                                Image("Pizza Slice")
-                            }
-                        }
-                    }
-                    Spacer()
-                }
-            }
-            Text("Your Order")
-            List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
-                HStack(alignment:.firstTextBaseline) {
-                    Text("Your Order Pizza here")
-                    Spacer()
-                    Text("$0.00")
-                }
-            }
             Spacer()
         }
             .padding()
